@@ -28,7 +28,6 @@ const HomeView = (props)=>{
                 <h2 class="bg-dark text-light p-4 mt-5 mb-5">Home Screen</h2>
                 <h3 class="">Current Value: {props.Result}</h3>
             </div>
-
             
         </div>
         
@@ -37,7 +36,7 @@ const HomeView = (props)=>{
 
 const mapStateToProps = (state)=>{
     return{
-        Result:state.SR.state.Result
+        Result:state.SR.Result
     }
 }
 

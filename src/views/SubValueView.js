@@ -33,8 +33,9 @@ const SubValueView = (props)=>{
 }
 
 const mapStateToProps = (state)=>{
+    
     return{
-        Result:state.SR.state.Result
+        Result:state.SR.Result
     }
 }
 

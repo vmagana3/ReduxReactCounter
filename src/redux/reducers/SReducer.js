@@ -2,36 +2,32 @@
 
 
 //Creamos el estado Inicial//
-const INITIAL_STATE ={
+const INITIAL_STATE = {
     Result:0
 };
 
 //Creamos el reducer//
-const SReducer = (state = INITIAL_STATE, action)=>{
-    switch(action.type){
+const SReducer = (state = INITIAL_STATE, {type, value})=>{
+	
+    switch(type){
         case 'ADD':
-            {
-                return{
+                return {
                     ...state,
-                    Result: state.Result + action.value
+                    Result: state.Result + value
                 }
-            }
 
-        case 'SUB':{
-            return{
+        case 'SUB':
+            return {
                 ...state,
-                Result:state.Result - action.value
+                Result:state.Result - value
             }
-        }
+    
 
-        default:{
-            return{
-                state
-            }
-        }
+        default:
+            return state;
+
     }
 }
 
 //Exportamos el reducer//
 export default SReducer;
-

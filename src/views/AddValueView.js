@@ -27,7 +27,6 @@ const AddValueView = (props)=>{
                 <h3 class="">Current Value: {props.Result}</h3>
                 <button onClick={()=>props.reduxAdd(1)}>Aumentar</button>
             </div>
-
         
         </div>
     )
@@ -35,13 +34,14 @@ const AddValueView = (props)=>{
 
 const mapStateToProps = (state)=>{
     return{
-        Result: state.SR.state.Result
+        Result: state.SR.Result
     }
 }
 
 const mapDispatchToProps = (dispatch)=>{
     return{
         reduxAdd:(value)=>{
+            console.log("[D] Action", value);
             dispatch({
                 type:'ADD',
                 value:value
